@@ -16,6 +16,7 @@ The official platform for testing assignments is Debian 11, which should be run 
 
 This course is ideal for students who are looking to deepen their understanding of software development at a system level and want practical experience in optimizing software performance.
 
-## Assignments
+## Assignments / Tareas 
 
 - [Tarea 1](/Tarea%201/): Bitwise operations / Operaciones con bits
+- [Tarea 2](/Tarea%202/): Strings

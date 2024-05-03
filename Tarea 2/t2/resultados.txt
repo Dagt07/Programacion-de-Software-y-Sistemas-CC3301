@@ -1,0 +1,71 @@
+Sistema operativo utilizado
+Linux David 5.15.90.1-microsoft-standard-WSL2 #1 SMP Fri Jan 27 02:56:13 UTC 2023 x86_64 GNU/Linux
+==== run-san ====
+gcc -g -DSAN=1 -fsanitize=address -fsanitize=undefined -DSANITIZE -Wall -Werror -std=c18 -Wno-unused-function  test-elim.c elim.c -lm -o elim.bin-san
+./elim.bin-san
+Tests de eliminar
+Tests de eliminados
+Test de uso de memoria de eliminados
+---------------------
+Benchmark de eliminar
+---------------------
+Intento= 1
+Tiempo para su version= 37 milisegundos
+Aprobado
+-----------------------
+Benchmark de eliminados
+-----------------------
+Intento= 1
+Tiempo para su version= 61 milisegundos
+Felicitaciones!  Aprobo todos los tests.
+==== run-g ====
+gcc -g -Wall -Werror -std=c18 -Wno-unused-function  test-elim.c elim.c -lm -o elim.bin-g
+./elim.bin-g
+Tests de eliminar
+Tests de eliminados
+Test de uso de memoria de eliminados
+---------------------
+Benchmark de eliminar
+---------------------
+Intento= 1
+Tiempo para su version= 11 milisegundos
+Aprobado
+-----------------------
+Benchmark de eliminados
+-----------------------
+Intento= 1
+Tiempo para su version= 19 milisegundos
+Felicitaciones!  Aprobo todos los tests.
+==== run ====
+gcc -O -DOPT=1 -Wall -Werror -std=c18 -Wno-unused-function  test-elim.c elim.c -lm -o elim.bin
+Midiendo cuanto demora la solucion del profesor
+rm -f tiempo-ref.txt
+chmod +x prof.ref-x86_64
+./prof.ref-x86_64 ref > /dev/null
+Tiempos de referencia =  177 451
+Verificando y comparando con su solucion
+./elim.bin 177 451
+Tests de eliminar
+Tests de eliminados
+Test de uso de memoria de eliminados
+---------------------
+Benchmark de eliminar
+---------------------
+Tiempo para la version del profesor= 177 milisegundos
+Intento= 1
+Tiempo para su version= 493 milisegundos
+Porcentaje de sobrecosto: 178 %
+Excede en mas del 80 % la version del profesor
+Se hara un nuevo intento
+Intento= 2
+Tiempo para su version= 219 milisegundos
+Porcentaje de sobrecosto: 23 %
+Aprobado
+-----------------------
+Benchmark de eliminados
+-----------------------
+Tiempo para la version del profesor= 451 milisegundos
+Intento= 1
+Tiempo para su version= 468 milisegundos
+Porcentaje de sobrecosto: 3 %
+Felicitaciones!  Aprobo todos los tests.
