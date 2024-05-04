@@ -20,9 +20,9 @@ This course is ideal for students who are looking to deepen their understanding 
 
 - [Tarea 1](/Tarea%201/): Bitwise operations / Operaciones con bits
 - [Tarea 2](/Tarea%202/): Strings
-- [Tarea 3](/Tarea%203/): Estructuras
-- [Tarea 4](/Tarea%204/): Archivos
+- [Tarea 3](/Tarea%203/): Structures in C / Estructuras
+- [Tarea 4](/Tarea%204/): Files / Archivos
 - [Tarea 5](/Tarea%205/): Assembler
-- [Tarea 6](/Tarea%206/): Circuitos, caché y pipeline
-- [Tarea 7](/Tarea%207/): Paralelización con fork
+- [Tarea 6](/Tarea%206/): Circuits / Circuitos, caché y pipeline
+- [Tarea 7](/Tarea%207/): Parallelization with fork / Paralelización con fork
 
